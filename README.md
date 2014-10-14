@@ -40,18 +40,18 @@ pubnub:
 * run the following command using Curl
 
 ```
-curl -v -v -XPUT 'localhost:9200/_river/pubnub_river/_meta' -d '{ \
-	    "type" : "pubnub", \
-	    "pubnub" : { \
-	        "publishKey"   : "YOUR-PUBLISH-KEY", \
-	        "subscribeKey" : "YOUR-SUBSCRIBE-KEY", \
-	        "useSsl"       : "true", \
-	        "channels"     : "elasticsearch_changes" \
-	    }, \
-	    "index" : { \
-	        "bulk_size" : 100 \
-	    } \
-	}'
+curl -v -v -XPUT 'localhost:10200/_river/pubnub_river/_meta' -d '{ 
+        "type" : "pubnub",
+        "pubnub" : {
+            "publishKey"   : "demo",
+            "subscribeKey" : "demo",
+            "useSsl"       : "true",
+            "channels"     : "es_bostonmeetup_chan"
+        },
+        "index" : {
+            "bulk_size" : 100
+        }
+    }'
 ```
 
 # Debugging PubNub Communications
