@@ -43,10 +43,10 @@ pubnub:
 curl -v -v -XPUT 'localhost:10200/_river/pubnub_river/_meta' -d '{ 
         "type" : "pubnub",
         "pubnub" : {
-            "publishKey"   : "demo",
-            "subscribeKey" : "demo",
+            "publishKey"   : "YOUR-PUBLISH-KEY",
+            "subscribeKey" : "YOUR-SUBSCRIBE-KEY",
             "useSsl"       : "true",
-            "channels"     : "es_bostonmeetup_chan"
+            "channels"     : "elasticsearch_changes"
         },
         "index" : {
             "bulk_size" : 100
@@ -73,4 +73,4 @@ Using pubnub_debug_publish.coffee:
 
 * edit the script to contain your *publish* key
 * edit the script to reflect your document content, index, key and version
-* run ```coffee pubnub_debug_listen.coffee CHANNEL_NAME```, where CHANNEL_NAME is your PubNub channel name (as above, 'elasticsearch_changes')
+* run ```coffee pubnub_debug_publish.coffee CHANNEL_NAME```, where CHANNEL_NAME is your PubNub channel name (as above, 'elasticsearch_changes')
