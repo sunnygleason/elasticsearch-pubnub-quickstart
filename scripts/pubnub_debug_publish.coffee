@@ -6,7 +6,7 @@ pubnub = require("pubnub").init {
 console.log "sending"
 
 pubnub.publish {
-  channel: "test_elasticsearch"
+  channel: "es_bostonmeetup_chan"
   message: {
     "action"  : "create"
     "index"   : "index1"
